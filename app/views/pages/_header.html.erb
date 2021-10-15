@@ -6,10 +6,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
-        <li class="nav-item">
-          <%= link_to 'About Me', about_page_path, class:"nav-link" %>
-        </li>
 
         <li class="nav-item">
           <%= link_to 'Friends', friends_path, class:"nav-link" %>
@@ -19,6 +15,10 @@
           <%= link_to 'Add Friend', new_friend_path, class:"nav-link" %>
         </li>
        
+        <li class="nav-item">
+          <%= link_to 'About Me', about_page_path, class:"nav-link" %>
+        </li>
+
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

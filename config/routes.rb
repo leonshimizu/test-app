@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :friends
   root 'pages#index'
   get 'about_page' => 'pages#about'
