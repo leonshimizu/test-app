@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Friends</h1>
-
-<table>
-  <thead>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Friend', new_friend_path %>
+<%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
