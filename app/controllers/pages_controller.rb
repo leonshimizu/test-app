@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def about
+    @about_me = "My name is Leon Shimizu..."
   end
 end
