@@ -59,3 +59,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.8'
+
+# successfully pushed to heroku - had to delete sqlite3 and download postgres
