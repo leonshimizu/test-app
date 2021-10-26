@@ -25,10 +25,9 @@
 
   <br>
 
-  <%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
+  <%= link_to 'New Contact', new_friend_path, class:"btn btn-secondary" %>
 <% else %>
 
-<h1>Test - Hello World</h1>
-<p>This is my first real website!</p>
+<%= render 'pages/index' %>
 
 <% end %>
