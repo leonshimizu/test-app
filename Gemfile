@@ -63,3 +63,5 @@ gem 'devise', '~> 4.8'
 #  gem 'pg', '~> 1.2', '>= 1.2.3'
 gem 'sqlite3', '~> 1.4', '>= 1.4.2' # switch to postgres when putting on heroku
 # successfully pushed to heroku - had to delete sqlite3 and download postgres
+
+gem 'http', '~> 5.0', '>= 5.0.4'

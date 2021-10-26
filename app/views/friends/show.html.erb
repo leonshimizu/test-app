@@ -5,6 +5,28 @@
     <%= @friend.phone %> |
     <%= @friend.location %>
     </p>
+
+    
+    <%
+    location = @friend.location
+    units = "imperial"
+
+    link = HTTP.get("https://api.openweathermap.org/data/2.5/weather?q=#{location}&units=#{units}&appid=a09eccaf5f469c334b8263becf15029c")
+    weather_link = link.parse(:json)
+
+    name = weather_link["name"]
+    description = weather_link["weather"][0]["description"]
+    temperature = weather_link["main"]["temp"]
+    feels_like = weather_link["main"]["feels_like"]
+    min_temperature = weather_link["main"]["temp_min"]
+    max_temperature = weather_link["main"]["temp_max"]
+    humidity = weather_link["main"]["humidity"]
+    wind_speed = weather_link["wind"]["speed"]
+
+    p "In #{name}, the current temperature in #{units} is #{temperature} degrees but it feels like #{feels_like} degrees. The minimum temperature is #{min_temperature} and the maximum is #{max_temperature}. The description of the weather is #{description} and the humidity is at #{humidity} with a wind speed of #{wind_speed}."
+    %>
+    
+
   <hr class="my-4">
   <p class="lead">
     <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> 
