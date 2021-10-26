@@ -5,6 +5,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Location</th>
         <th> </th>
       </tr>
     </thead>
@@ -16,6 +17,7 @@
           <td><%= link_to friend.first_name + ' ' + friend.last_name, friend %></td>
           <td><%= friend.email %></td>
           <td><%= friend.phone %></td>
+          <td><%= friend.location %></td>
           <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %></td>
         </tr>
         <% end %>

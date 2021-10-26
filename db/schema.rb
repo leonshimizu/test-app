@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_16_043821) do
+ActiveRecord::Schema.define(version: 2021_10_26_204836) do
 
   create_table "friends", force: :cascade do |t|
     t.string "first_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_10_16_043821) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.string "location"
     t.index ["user_id"], name: "index_friends_on_user_id"
   end
 
@@ -36,6 +37,3 @@ ActiveRecord::Schema.define(version: 2021_10_16_043821) do
   end
 
 end
-
-# to add to database run - rails g migration add_user_id_to_friends user_id:integer:index
-# and then run rails db:migrate
